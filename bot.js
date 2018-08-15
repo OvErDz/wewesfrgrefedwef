@@ -144,6 +144,8 @@ client.on('message', message => {
 
 
 
+
+
 client.on('message', message =>{
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
@@ -170,6 +172,10 @@ if(cmd === `${prefix}suggest`) {
 
 
 
+
+
+
+
 client.on('message', message => {
               if (!message.channel.guild) return;
       if(message.content =='$members')
@@ -183,10 +189,10 @@ client.on('message', message => {
     });
 
 
-	
 
-	
-	
+
+
+
 	
 	
 	client.on('message', msg => { 
@@ -209,6 +215,8 @@ client.on('message', message => {
 	
 	
 	
+
+
 
 
 client.on('message', message => {
@@ -302,6 +310,11 @@ client.on('guildMemberAdd', member => {
 
 
 
+
+
+
+
+
 client.on("message", message => {
     var prefix = "$";
  
@@ -387,6 +400,11 @@ message.channel.send({embed});
 
 
 
+
+
+
+
+
 client.on("message", (message) => {
             if (message.channel.type === "dm") {
         if (message.author.id === client.user.id) return;
@@ -401,6 +419,11 @@ client.on("message", (message) => {
                 client.users.get("426500624025124864").send(yumz)
             }
 });
+
+
+
+
+
 
 
 
