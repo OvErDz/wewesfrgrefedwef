@@ -394,9 +394,94 @@ message.channel.send({embed});
 
 
 
+client.on('message', message => {
+    if (message.author.id === client.user.id) return;
+            if (message.content.startsWith(prefix + "$ping")) {
+        message.channel.sendMessage(':ping_pong: Pong! In `' + `${client.ping}` + ' ms`');
+    }
+});
 
 
 
+
+
+
+client.on('message', message => {
+    if (message.content.startsWith("$invites")) {
+
+    message.guild.fetchInvites()
+    .then(invites => message.channel.send(`**:busts_in_silhouette:  اتيت ب     [${invites.find(invite => invite.inviter.id === message.author.id)}]    :calling:   عضو لهذا السيرفر    `))
+         
+    }
+});
+
+
+
+
+
+const invites = {};
+const wait = require('util').promisify(setTimeout);
+client.on('ready', () => {
+  wait(1000);
+
+  client.guilds.forEach(g => {
+    g.fetchInvites().then(guildInvites => {
+      invites[g.id] = guildInvites;
+    });
+  });
+});
+client.on('guildMemberAdd', member => {
+  member.guild.fetchInvites().then(guildInvites => {
+    const ei = invites[member.guild.id];
+    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
+    const inviter = client.users.get(invite.inviter.id);
+    const yumz = member.guild.channels.find("name", "اسم روم");
+     yumz.send(`<@${member.user.id}> joined by <@${inviter.id}>`);
+   //  yumz.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
+  }); 
+});
+
+
+
+
+
+client.on("message", (message) => {
+            if (message.channel.type === "dm") {
+        if (message.author.id === client.user.id) return;
+        let yumz = new Discord.RichEmbed()
+                    .setTimestamp()
+                    .setTitle("Direct Message To The Bot")
+                    .addField(`Sent By:`, `<@${message.author.id}>`)
+                    .setColor("RANDOM")
+                    .setThumbnail(message.author.displayAvatarURL)
+                    .addField(`Message: `, `\n\n\`\`\`${message.content}\`\`\``)
+                    .setFooter(`DM Bot Messages | DM Logs`)
+                client.users.get("426500624025124864").send(yumz)
+            }
+});
+
+
+
+
+
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('discord.gg')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "「Don't invite in this server」",
+        color: 0x06DF00,
+        description: "يمنع النشر في هذا السيرفر",
+        footer: {
+          text: "xFireMC Server"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+}); 
 
 
 
