@@ -248,7 +248,8 @@ client.on('message', message => {
         const embed = new Discord.RichEmbed()
         .setColor('B90C0C')
         .setAuthor(member.user.tag, member.user.avatarURL)
- .setDescription(':rose:**فضلاً قم بالاطلاع على قوانين السيرفر لتجنب تعرضك للحظر xFireMC أهلاً وسهلاً بك في سيرفر**:rose:')
+ .setDescription('**        :rose: xFireMC أهلاً وسهلاً بك في سيرفر :rose:
+:name_badge: فضلاً قم بالاطلاع على قوانين السيرفر لتجنب تعرضك للحظر :name_badge:**')
 .setThumbnail(member.avatarURL)
   .setImage('https://www.askideas.com/media/13/Micky-Mouse-With-Welcome-Banner-Glitter.gif')
         .setTimestamp()
