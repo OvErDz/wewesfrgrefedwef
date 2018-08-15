@@ -266,7 +266,7 @@ client.on('message', async message =>{
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   let sicon = message.author.displayAvatarURL;
-  if(cmd === `$id`) {
+  if(cmd === `$myid`) {
       var bots = new Discord.RichEmbed()
 
       .setDescription(`** Your id: ${message.author.id}  **`)
@@ -297,7 +297,7 @@ client.on('guildMemberAdd', member => {
     const ei = invites[member.guild.id];
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
-    const yumz = member.guild.channels.find("name", "⟫welcome⟪");
+    const yumz = member.guild.channels.find("name", "invites_log");
      yumz.send(`:pushpin:<@${member.user.id}> joined by <@${inviter.id}>`);
    //  yumz.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   }); 
@@ -389,31 +389,6 @@ message.channel.send({embed});
 
 });
 
-
-
-
-
-
-client.on('message', message => {
-    if (message.author.id === client.user.id) return;
-            if (message.content.startsWith(prefix + "$ping")) {
-        message.channel.sendMessage(':ping_pong: Pong! In `' + `${client.ping}` + ' ms`');
-    }
-});
-
-
-
-
-
-
-client.on('message', message => {
-    if (message.content.startsWith("$invites")) {
-
-    message.guild.fetchInvites()
-    .then(invites => message.channel.send(`**:busts_in_silhouette:  اتيت ب     [${invites.find(invite => invite.inviter.id === message.author.id)}]    :calling:   عضو لهذا السيرفر    `))
-         
-    }
-});
 
 
 
