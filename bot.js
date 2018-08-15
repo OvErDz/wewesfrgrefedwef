@@ -440,22 +440,7 @@ client.on("message", (message) => {
 
 
 
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-        message.delete()
-      message.channel.sendMessage("", {embed: {
-        title: "「Don't invite in this server」",
-        color: 0x06DF00,
-        description: "يمنع النشر في هذا السيرفر",
-        footer: {
-          text: "xFireMC Server"
-        }
-      }}).then(msg => {msg.delete(3000)});
-                          }
 
-     
-}); 
 
 
 
