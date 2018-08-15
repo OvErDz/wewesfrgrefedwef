@@ -418,8 +418,6 @@ client.on('message', message => {
 
 
 
-
-const invites = {};
 const wait = require('util').promisify(setTimeout);
 client.on('ready', () => {
   wait(1000);
