@@ -430,7 +430,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('$awarn @')){
+    if(message.content.includes('$awarn !msg.mentions.members.first()) return msg.reply')){
         message.delete()
       message.channel.sendMessage("", {embed: {
         title: "Done :white_check_mark:",
