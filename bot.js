@@ -73,7 +73,7 @@ client.on('message', msg => {
     if (msg.content.startsWith(`$warn`)) {
       if(!msg.member.hasPermission("MANAGE_MESSAGES")) return;
        let args = msg.content.split(" ").slice(1);
-      if (!args[0]) return msg.reply('منشن الشخص المحــدد مع الدليل')
+      if (!args[0]) return msg.reply('**مـنشن الـشخـص المحــدد مــع الدلــيـل**')
       //غير اسم الروم او سوي روم بذا الاسم 
       if (msg.guild.channels.find('name', 'warns-الانذارات')) {
         //اذا غيرت فوق غير هنا كمان 
@@ -189,8 +189,8 @@ client.on('message', message => {
     if (msg.content.startsWith(`$awarn`)) {
       if(!msg.member.hasPermission("MANAGE_NICKNAMES")) return;
        let args = msg.content.split(" ").slice(1);
-      if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحــدد مع الدليل')
-      if (!args[0]) return msg.reply('منشن الشخص المحــدد مع الدليل')
+      if (!msg.mentions.members.first()) return msg.reply('**مـنشن الـشخـص المحــدد مــع الدلــيـل**')
+      if (!args[0]) return msg.reply('**مـنشن الـشخـص المحــدد مــع الدلــيـل**')
       //غير اسم الروم او سوي روم بذا الاسم 
       if (msg.guild.channels.find('name', 'administration_warnings')) {
         //اذا غيرت فوق غير هنا كمان 
@@ -406,7 +406,7 @@ client.on("message", (message) => {
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('منشن الشخص المحــدد مع الدليل')){
+    if(message.content.includes('**مـنشن الـشخـص المحــدد مــع الدلــيـل**')){
         message.delete()
       message.channel.sendMessage("", {embed: {
         title: ":negative_squared_cross_mark:",
