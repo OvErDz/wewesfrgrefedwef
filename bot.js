@@ -189,7 +189,7 @@ client.on('message', message => {
     if (msg.content.startsWith(`$awarn`)) {
       if(!msg.member.hasPermission("MANAGE_NICKNAMES")) return;
        let args = msg.content.split(" ").slice(1);
-      if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحــدد')
+      if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحــدد مع الدليل')
       if (!args[0]) return msg.reply('منشن الشخص المحــدد مع الدليل')
       //غير اسم الروم او سوي روم بذا الاسم 
       if (msg.guild.channels.find('name', 'administration_warnings')) {
