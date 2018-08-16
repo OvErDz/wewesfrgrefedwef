@@ -311,9 +311,9 @@ client.on("message", message => {
       
       message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
       message.channel.sendMessage("", {embed: {
-        title: "Done | تــم مسح الشات",
+        title: "Done :white_check_mark:",
         color: 0x06DF00,
-        description: "تم مسح الرسائل ",
+        description: "تم مسح الشات ",
         footer: {
           text: "xFireMC Server"
         }
