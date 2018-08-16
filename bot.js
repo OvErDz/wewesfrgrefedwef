@@ -426,27 +426,4 @@ client.on('message', message => {
 
 
 
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('منشن الشخص المحــدد مع الدليل')){
-        message.delete()
-      message.channel.sendMessage("", {embed: {
-        title: ":negative_squared_cross_mark:",
-        color: 0x06DF00,
-        description: "يرجى كتابة المنشن مصحوب بالدليل",
-        footer: {
-          text: "xFireMC"
-        }
-      }}).then(msg => {msg.delete(3000)});
-                          }
-
-     
-}); 
-
-
-
-
-
-
 client.login(process.env.BOT_TOKEN);
