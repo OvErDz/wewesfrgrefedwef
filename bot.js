@@ -405,12 +405,32 @@ client.on("message", (message) => {
 
 
 
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('$warn @')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "Done :white_check_mark:",
+        color: 0x06DF00,
+        description: "تم كتابة الانذار بنجاح",
+        footer: {
+          text: "xFireMC"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+}); 
+
+
+
+
 
 
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('$awarn')){
+    if(message.content.includes('$awarn @')){
         message.delete()
       message.channel.sendMessage("", {embed: {
         title: "Done :white_check_mark:",
@@ -425,6 +445,51 @@ client.on('message', message => {
      
 }); 
 
+
+
+
+
+
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('$awarn')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "Error :negative_squared_cross_mark:",
+        color: 0x06DF00,
+        description: "يرجى كتابة المنشن",
+        footer: {
+          text: "xFireMC"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+}); 
+
+
+
+
+
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('$warn')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "Error :negative_squared_cross_mark:",
+        color: 0x06DF00,
+        description: "يرجى كتابة المنشن",
+        footer: {
+          text: "xFireMC"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+}); 
 
 
 
