@@ -73,7 +73,6 @@ client.on('message', msg => {
     if (msg.content.startsWith(`$warn`)) {
       if(!msg.member.hasPermission("MANAGE_MESSAGES")) return;
        let args = msg.content.split(" ").slice(1);
-      if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحدد')
       if (!args[0]) return msg.reply('اكتب السبب مع الدليل')
       //غير اسم الروم او سوي روم بذا الاسم 
       if (msg.guild.channels.find('name', 'warns-الانذارات')) {
@@ -407,12 +406,12 @@ client.on("message", (message) => {
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('$warn @')){
+    if(message.content.includes('$warn')){
         message.delete()
       message.channel.sendMessage("", {embed: {
-        title: "Done :white_check_mark:",
+        title: ":negative_squared_cross_mark:",
         color: 0x06DF00,
-        description: "تم كتابة الانذار بنجاح",
+        description: "يرجى كتابة المنشن مع الدليل",
         footer: {
           text: "xFireMC"
         }
@@ -430,12 +429,12 @@ client.on('message', message => {
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('$warn mentions')){
+    if(message.content.includes('$awarn')){
         message.delete()
       message.channel.sendMessage("", {embed: {
-        title: "Done :white_check_mark:",
+        title: ":negative_squared_cross_mark:",
         color: 0x06DF00,
-        description: "تم كتابة انذار اداري بنجاح",
+        description: "يرجى كتابة المنشن مصحوب بالدليل",
         footer: {
           text: "xFireMC"
         }
