@@ -426,4 +426,39 @@ client.on('message', message => {
 
 
 
+
+
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`(__xFireMC إدارة __)
+
+──▄────▄▄▄▄▄▄▄────▄───
+─▀▀▄─▄█████████▄─▄▀▀──
+─────██─▀███▀─██──────
+───▄─▀████▀████▀─▄────
+─▀█────██▀█▀██────█▀──
+
+
+اهلا وسهلا بك في السيرفر , 
+
+نقدر تواجدك معنا فضلاً القي نظرة على
+
+ القوانين لتجنب حسابك من الحظر في
+
+ شات  #》rules《
+
+**"نتمنى لك وقت ممتع"**                                                                                                                 
+
+                                                                                                                       —⤛ ${member} ⤜—
+انت العضو رقم ${member.guild.memberCount} `)
+
+}).catch(console.error)
+})
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
