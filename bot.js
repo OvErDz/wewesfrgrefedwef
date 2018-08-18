@@ -485,7 +485,7 @@ client.on('message', message => {
 
 
 
-lient.on('message', message => {
+client.on('message', message => {
     if (message.content.startsWith("$invite")) {
  
   message.channel.createInvite({
@@ -521,7 +521,6 @@ lient.on('message', message => {
       message.author.sendEmbed(Embed11)
     }
 });
-
 
 
 
