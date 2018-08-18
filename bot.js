@@ -184,33 +184,6 @@ if(cmd === `${prefix}suggest`) {
     }
 })
 		
-
-
-
-
-client.on('message', message => {
-  if (true) {
-if (message.content === '$invite') {
-      message.author.send('  :love_letter: https://discord.gg/NhkmwZd :love_letter:      ').catch(e => console.log(e.stack));
-
-    }
-   } 
-  });
-
-
-client.on('message', message => {
-     if (message.content === "$invite") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#a55c01")
-  .addField("Done :white_check_mark:" , "  تــــم ارســال الــرابــط في الخــاص :mailbox_with_mail:")
-     
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
-	
 	
 	
 	
