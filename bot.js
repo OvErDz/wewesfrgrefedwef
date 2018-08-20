@@ -477,10 +477,10 @@ client.on('message', msg => {
     if(command === "clear") {
         const emoji = client.emojis.find("name", "wastebasket")
     let textxt = args.slice(0).join("");
-    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
+    if(msg.member.hasPermission("EMBED_LINKS")) {
     if (textxt == "") {
         msg.delete().then
-    msg.channel.send("***```ضع عدد الرسائل التي تريد مسحها 👌```***").then(m => m.delete(3000));
+    msg.channel.send("**```ضع عدد الرسائل التي تريد مسحها```**").then(m => m.delete(3000));
 } else {
     msg.delete().then
     msg.delete().then
