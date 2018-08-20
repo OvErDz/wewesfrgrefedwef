@@ -252,37 +252,6 @@ client.on('guildMemberAdd', member => {
 
 
 
-
-
-
-client.on("message", message => {
-    var prefix = "$";
- 
-            var args = message.content.substring(prefix.length).split(" ");
-            if (message.content.startsWith(prefix + "clear")) {
-   if(!message.member.hasPermission('EMBED_LINKS')) return message.reply('⚠ | **لا يوجد لديك صلاحية لمسح الشات**');
-        var msg;
-        msg = parseInt();
-      
-      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
-      message.channel.sendMessage("", {embed: {
-        title: "Done :white_check_mark:",
-        color: 0x06DF00,
-        description: "تم مسح الشات ",
-        footer: {
-          text: "xFireMC Server"
-        }
-      }}).then(msg => {msg.delete(3000)});
-                          }
-
-     
-});
-
-
-
-
-
-
 client.on('message', message => {
     var prefix = "$"
 var args = message.content.split(" ").slice(1);    
