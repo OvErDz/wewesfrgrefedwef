@@ -565,29 +565,26 @@ member.addRole(KinG66S[member.user.id].roles.shift());
 client.on("ready", async  => {
 setInterval(function(){
 client.channels.find('id', '482539445388836879').setName("-");	
-client.channels.find('id', '482539445388836879').setName("」-");	
-client.channels.find('id', '482539445388836879').setName("W」-");
-client.channels.find('id', '482539445388836879').setName("We」-");
-client.channels.find('id', '482539445388836879').setName("Wel」-");
-client.channels.find('id', '482539445388836879').setName("Welc」-");
-client.channels.find('id', '482539445388836879').setName("Welco」-");
-client.channels.find('id', '482539445388836879').setName("Welcom」-");
-client.channels.find('id', '482539445388836879').setName("Welcome」-");
-client.channels.find('id', '482539445388836879').setName("Welcome T」-");
-client.channels.find('id', '482539445388836879').setName("Welcome To」-");
-client.channels.find('id', '482539445388836879').setName("Welcome To x」-");
-client.channels.find('id', '482539445388836879').setName("Welcome To xF」-");
-client.channels.find('id', '482539445388836879').setName("Welcome To xFi」-");
-client.channels.find('id', '482539445388836879').setName("Welcome To xFir」-");
-client.channels.find('id', '482539445388836879').setName("Welcome To xFire」-");
-client.channels.find('id', '482539445388836879').setName("Welcome To xFireM」-"); 
-client.channels.find('id', '482539445388836879').setName("Welcome To xFireMC」-");
-client.channels.find('id', '482539445388836879').setName("「Welcome To xFireMC」-");
+client.channels.find('id', '482539445388836879').setName("「-");	
+client.channels.find('id', '482539445388836879').setName("-「W");
+client.channels.find('id', '482539445388836879').setName("-「We");
+client.channels.find('id', '482539445388836879').setName("-「Wel");
+client.channels.find('id', '482539445388836879').setName("-「Welc");
+client.channels.find('id', '482539445388836879').setName("-「Welco");
+client.channels.find('id', '482539445388836879').setName("-「Welcom");
+client.channels.find('id', '482539445388836879').setName("-「Welcome");
+client.channels.find('id', '482539445388836879').setName("-「Welcome T");
+client.channels.find('id', '482539445388836879').setName("-「Welcome To");
+client.channels.find('id', '482539445388836879').setName("-「Welcome To x");
+client.channels.find('id', '482539445388836879').setName("-「Welcome To xF");
+client.channels.find('id', '482539445388836879').setName("-「Welcome To xFi");
+client.channels.find('id', '482539445388836879').setName("-「Welcome To xFir");
+client.channels.find('id', '482539445388836879').setName("-「Welcome To xFire");
+client.channels.find('id', '482539445388836879').setName("-「Welcome To xFireM"); 
+client.channels.find('id', '482539445388836879').setName("-「Welcome To xFireMC");
+client.channels.find('id', '482539445388836879').setName("-「Welcome To xFireMC」");
  }, 4000);
 });
-
-
-
 
 
 
