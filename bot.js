@@ -590,4 +590,16 @@ client.channels.find('id', '482539445388836879').setName("-「Welcome To xFireMC
 
 
 
+client.on('voiceStateUpdate', (old, now) => {
+  const channel = client.channels.get('482679786074800129');
+  const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
+  const size = channel.name.match(/\[\s(\d+)\s\]/);
+  if (!size) return channel.setName(`xFireMC Online ➥ ${currentSize}`);
+  if (currentSize !== size) channel.setName(`Voice Online:  ${currentSize}`);
+});
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
