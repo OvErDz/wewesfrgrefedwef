@@ -564,7 +564,7 @@ member.addRole(KinG66S[member.user.id].roles.shift());
 
 client.on("ready", async  => {
 setInterval(function(){
-client.channels.find('id', '482535712110149674').setName("W");
+client.channels.find('id', '482535712110149674').setName("-「W");
 client.channels.find('id', '482535712110149674').setName("We");
 client.channels.find('id', '482535712110149674').setName("Wel");
 client.channels.find('id', '482535712110149674').setName("Welc");
@@ -579,7 +579,7 @@ client.channels.find('id', '482535712110149674').setName("Welcome To xFi");
 client.channels.find('id', '482535712110149674').setName("Welcome To xFir");
 client.channels.find('id', '482535712110149674').setName("Welcome To xFire");
 client.channels.find('id', '482535712110149674').setName("Welcome To xFireM"); 
-client.channels.find('id', '482535712110149674').setName("Welcome To xFireMC");
+client.channels.find('id', '482535712110149674').setName("Welcome To xFireMC」");
  }, 4000);
 });
 
