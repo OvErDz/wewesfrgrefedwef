@@ -446,6 +446,13 @@ client.on('message', msg => {
 
 
 
+client.on('ready', () => {
+     client.user.setActivity("xFireMC Bot",{type: ''});
+
+});
+
+
+
 
 
 client.login(process.env.BOT_TOKEN);
