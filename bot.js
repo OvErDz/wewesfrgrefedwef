@@ -186,23 +186,6 @@ if(cmd === `${prefix}suggest`) {
 		
 	
 	
-	
-	
-	
-	client.on("guildMemberAdd", function(member) {
-    const wc = member.guild.channels.find("name", "⟫welcome⟪")
-        const embed = new Discord.RichEmbed()
-        .setColor('B90C0C')
-        .setAuthor(member.user.tag, member.user.avatarURL)
- .setDescription('**🌹أهلاً وسهلاً بك في السيرفرفضلاً قم بالأطلاع على قوانين السيرفر لتجنب تعرضك للحظر🌹**')
-.setThumbnail(member.avatarURL)
-  .setImage('https://www.askideas.com/media/13/Micky-Mouse-With-Welcome-Banner-Glitter.gif')
-        .setTimestamp()
-        return wc.sendEmbed(embed);
-        
-});
-	
-	
 
 
 
@@ -464,6 +447,29 @@ client.on('message', msg => {
     }
 }
 });
+
+
+
+
+
+
+
+
+	client.on("guildMemberAdd", function(member) {
+    const wc = member.guild.channels.find("name", "⟫welcome⟪")
+        const embed = new Discord.RichEmbed()
+        .setColor('B90C0C')
+        .setAuthor(member.user.tag, member.user.avatarURL)
+ .setDescription('**🌹أهلاً وسهلاً بك في السيرفرفضلاً قم بالأطلاع على قوانين السيرفر لتجنب تعرضك للحظر🌹**')
+.setThumbnail(member.avatarURL)
+  .setImage('https://www.askideas.com/media/13/Micky-Mouse-With-Welcome-Banner-Glitter.gif')
+        .setTimestamp()
+        return wc.sendEmbed(embed);
+        
+});
+
+
+
 
 
 
