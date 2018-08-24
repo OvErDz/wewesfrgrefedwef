@@ -580,7 +580,7 @@ client.channels.find('id', '482535712110149674').setName("Welcome To xFir");
 client.channels.find('id', '482535712110149674').setName("Welcome To xFire");
 client.channels.find('id', '482535712110149674').setName("Welcome To xFireM"); 
 client.channels.find('id', '482535712110149674').setName("Welcome To xFireMC");
- }, 5000);
+ }, 2000);
 });
 
 
