@@ -605,38 +605,13 @@ client.on('voiceStateUpdate', (old, now) => {
 var prefix = "$";
 client.on('message', message => {
      if(message.author.bot) return;
+
     if (!message.content.startsWith(prefix)) return;
     let command = message.content.split(" ")[0];
     command = command.slice(prefix.length);
     if (command == "warn") {
 
-        if (!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.reply("**يجب توافر برمشن اداري**");
-    let args = message.content.split(" ").slice(1);
-                    let reason = message.content.split(" ").slice(2).join(" ");
-                if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
-        if (!reason) return message.reply("**اكتب سبب الانذار**");
-
-        message.channel.sendMessage(args.join("  "))
-        message.delete();
-
-
-    }
-
-});
-
-
-
-
-
-var prefix = "$";
-client.on('message', message => {
-     if(message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
-    let command = message.content.split(" ")[0];
-    command = command.slice(prefix.length);
-    if (command == "awarn") {
-
-        if (!message.guild.member(message.author).hasPermission("VIEW_AUDIT_LOG")) return message.reply("**يجب توفر برمشن عالي**");
+        if (!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.reply("**يجب توفر برمشن اداري**");
     let args = message.content.split(" ").slice(1);
                     let reason = message.content.split(" ").slice(2).join(" ");
                 if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
@@ -652,6 +627,26 @@ client.on('message', message => {
 
 
 
+
+
+client.on('message', message => {
+    if(message.content === 'السلام عليكم'){
+        message.channel.send('عليكم السلام')
+    }
+});
+
+
+
+
+
+client.on('message', message => {
+    if (message.content.startsWith("$invites")) {
+
+    message.guild.fetchInvites()
+    .then(invites => message.channel.send(` **قمت بدعوة「 ${invites.find(invite => invite.inviter.id === message.author.id).uses} 」عضو للسيرفر**   `))
+         
+    }
+});
 
 
 
