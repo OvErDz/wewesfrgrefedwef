@@ -600,31 +600,7 @@ client.on('voiceStateUpdate', (old, now) => {
 
 
 
-     if(message.author.bot) return;
-
-    if (!message.content.startsWith(prefix)) return;
-    let command = message.content.split(" ")[0];
-    command = command.slice(prefix.length);
-    if (command == "warn") {
-
-        if (!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.reply("**يجب توفر برمشن اداري**");
-    let args = message.content.split(" ").slice(1);
-                    let reason = message.content.split(" ").slice(2).join(" ");
-                if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
-        if (!reason) return message.reply("**اكتب سبب الأنذار**");
-
-        message.channel.sendMessage(args.join("  "))
-        message.delete();
-
-
-    }
-
-});
-
-
-
-
-
+     
 client.on('message', message => {
     if(message.content === 'السلام عليكم'){
         message.channel.send('عليكم السلام')
