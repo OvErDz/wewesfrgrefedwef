@@ -600,9 +600,6 @@ client.on('voiceStateUpdate', (old, now) => {
 
 
 
-
-
-client.on('message', message => {
      if(message.author.bot) return;
 
     if (!message.content.startsWith(prefix)) return;
