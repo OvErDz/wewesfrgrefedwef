@@ -602,7 +602,6 @@ client.on('voiceStateUpdate', (old, now) => {
 
 
 
-var prefix = "$"
 client.on('message', message => {
      if(message.author.bot) return;
 
